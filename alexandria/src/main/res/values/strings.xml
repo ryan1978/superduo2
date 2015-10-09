@@ -1,0 +1,19 @@
+<resources>
+
+    <string name="app_name">Super Duo 2.0</string>
+    <string name="book_cover">Book Cover</string>
+
+    <!-- Menu actions -->
+    <string name="action_search">Search</string>
+    <string name="action_add">Add Book</string>
+    <string name="action_share">Share</string>
+    <string name="action_delete">Delete</string>
+
+    <!-- BookListFragment strings -->
+    <string name="title_bookslist">List of Books</string>
+    <string name="empty_book_list">No books found</string>
+
+    <!-- DetailFragment strings -->
+    <string name="share_text">A must read book: </string>
+
+</resources>
