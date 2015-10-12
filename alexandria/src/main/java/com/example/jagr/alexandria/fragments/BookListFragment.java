@@ -1,5 +1,6 @@
 package com.example.jagr.alexandria.fragments;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -11,6 +12,7 @@ import android.support.v7.widget.SearchView;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.inputmethod.EditorInfo;
@@ -19,6 +21,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.jagr.alexandria.activities.AddBooksActivity;
 import com.example.jagr.alexandria.adapters.BookListAdapter;
 import com.example.jagr.alexandria.data.AlexandriaContract;
 import com.example.jagr.superduo20.R;
@@ -62,6 +65,20 @@ public class BookListFragment extends Fragment implements LoaderManager.LoaderCa
                 return true;
             }
         });
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+
+        switch(id) {
+            case R.id.action_add:
+                Intent i = new Intent(getActivity(), AddBooksActivity.class);
+                startActivity(i);
+                return true;
+        }
+
+        return false;
     }
 
     @Override

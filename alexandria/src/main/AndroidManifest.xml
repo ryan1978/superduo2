@@ -34,6 +34,29 @@
                 android:value="com.example.jagr.alexandria.activities.MainActivity" />
         </activity>
 
+        <activity
+            android:name="com.example.jagr.alexandria.activities.AddBooksActivity"
+            android:label="@string/title_addbooks"
+            android:parentActivityName="com.example.jagr.alexandria.activities.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.jagr.alexandria.activities.MainActivity" />
+        </activity>
+
+        <activity
+            android:name="com.example.jagr.alexandria.activities.BarcodeScannerActivity"
+            android:label="@string/title_activity_barcode_scanner"
+            android:parentActivityName="com.example.jagr.alexandria.activities.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.jagr.alexandria.activities.MainActivity" />
+        </activity>
+
+        <service
+            android:name="com.example.jagr.alexandria.services.BookService"
+            android:exported="false" >
+        </service>
+
         <provider
             android:name="com.example.jagr.alexandria.data.BookProvider"
             android:authorities="com.example.jagr.alexandria"
@@ -41,11 +64,13 @@
 
         <receiver
             android:name="com.example.jagr.alexandria.receivers.AlexandriaReceiver"
-            android:enabled="true">
+            android:enabled="true"
+            android:exported="false">
             <intent-filter>
                 <action android:name="com.example.jagr.alexandria.ACTION_MESSAGE_EVENT" />
             </intent-filter>
         </receiver>
+
     </application>
 
 </manifest>
